@@ -1,6 +1,7 @@
 package support;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.function.BiConsumer;
@@ -15,17 +16,26 @@ public class SampleSolver extends FileReadTemplate<SampleSolver.Input, SampleSol
 
     @Override
     protected Function<Scanner, List<Input>> toInput() {
-        return null;
+        return scanner -> {
+            List<Input> inputs = new ArrayList<>();
+            // read using scanner
+            return inputs;
+        };
     }
 
     @Override
     protected BiConsumer<PrintWriter, List<Output>> toOutput() {
-        return null;
+        return (writer, output) -> {
+            for (int i = 0; i < output.size(); i++) {
+                writer.println("Case #" + (i + 1) + ": ");
+                // print output
+            }
+        };
     }
 
     @Override
     protected Output solve(Input input) {
-        return null;
+        return new Output();
     }
 
     static class Input {
