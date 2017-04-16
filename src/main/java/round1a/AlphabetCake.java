@@ -105,13 +105,4 @@ public class AlphabetCake extends FileReadTemplate<Character[][], Character[][]>
             k++;
         }
     }
-
-    private void upFill(char[] input, int fromIndex) {
-        char c = input[fromIndex];
-        int k = fromIndex - 1;
-        while (k >= 0 && input[k] == '?') {
-            input[k] = c;
-            k--;
-        }
-    }
 }
