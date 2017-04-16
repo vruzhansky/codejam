@@ -26,6 +26,10 @@ public abstract class FileReadTemplate<I, O> {
 
     protected abstract O solve(I input);
 
+    protected String dir() {
+        return "round1b/";
+    }
+
     private String getFilenameFromSystemIn() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a file name: ");
@@ -34,14 +38,14 @@ public abstract class FileReadTemplate<I, O> {
     }
 
     private List<I> readFile(String filename, Function<Scanner, List<I>> toInput) throws Exception {
-        File file = Paths.get("data/" + filename).toAbsolutePath().toFile();
+        File file = Paths.get("data/" + dir() + filename).toAbsolutePath().toFile();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             return toInput.apply(new Scanner(br));
         }
     }
 
     private void saveSolution(String fileName, BiConsumer<PrintWriter, List<O>> toOutput, List<O> output) throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter("results/" + fileName.replace(".in", ".out"), "UTF-8");
+        PrintWriter writer = new PrintWriter("results/" + dir() + fileName.replace(".in", ".out"), "UTF-8");
         toOutput.accept(writer, output);
         writer.close();
     }
