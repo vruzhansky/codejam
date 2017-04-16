@@ -1,6 +1,6 @@
-package round1a;
+package com.wr.codejam.round1a;
 
-import support.FileReadTemplate;
+import com.wr.codejam.support.FileReadTemplate;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;

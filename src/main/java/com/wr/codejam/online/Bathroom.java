@@ -1,8 +1,6 @@
-package online;
+package com.wr.codejam.online;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class Bathroom {

@@ -1,6 +1,6 @@
-package online;
+package com.wr.codejam.online;
 
-import support.FileReadTemplate;
+import com.wr.codejam.support.FileReadTemplate;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;

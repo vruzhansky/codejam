@@ -1,4 +1,4 @@
-package online;
+package com.wr.codejam.online;
 
 import java.io.*;
 import java.nio.file.Paths;

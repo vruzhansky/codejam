@@ -1,4 +1,4 @@
-package support;
+package com.wr.codejam.support;
 
 import java.io.*;
 import java.nio.file.Paths;

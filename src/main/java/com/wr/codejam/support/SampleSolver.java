@@ -1,4 +1,4 @@
-package support;
+package com.wr.codejam.support;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
